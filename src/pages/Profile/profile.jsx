@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './style.css'
 import Select from 'react-select'
 import HungarianlangIcon from '/src/images/hulangicon.png'
@@ -8,8 +8,10 @@ import GeneralDetails from "./GeneralDetails";
 import PersonalDetails from "./PersonalDetails";
 import AddressDetails from "./AddressDetails";
 import SocialDetails from "./SocialDetails";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
+  const navigate = useNavigate();
   const userData = {
     general: {
       userName: "ktommy",
@@ -103,6 +105,14 @@ function Profile() {
               <div className="col-2 offset-1" onClick={()=>setTheme('theme-3')}>
                 <div className="theme-3-box"></div>
               </div>
+            </div>
+             {/* Back to Main Page Button */}
+             <div className="col-12 mt-4">
+              <button
+                className="profile-img-action-btn"
+                onClick={() => navigate("/")}
+              >  Back to Main Page
+              </button>
             </div>
             {/* <div className="col-5">
             </div> */}
