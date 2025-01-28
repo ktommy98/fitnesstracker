@@ -450,7 +450,7 @@ export default function WorkoutPlan() {
       <Button
         onClick={() => navigate("/")}
         variation="primary"
-        style={{ marginTop: "2rem", backgroundColor: "#0073e6", color: "#fff" }}
+        style={{ marginTop: "2rem", backgroundColor: "#4635B1", color: "white" }}
       >
         Back to Main Page
       </Button>

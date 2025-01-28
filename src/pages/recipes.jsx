@@ -298,7 +298,7 @@ export default function Recipes() {
 
       {/* Vissza a főoldalra gomb */}
       <Button onClick={() => navigate("/")} variation="primary"
-        style={{ marginTop: "1rem", backgroundColor: "#0073e6", color: "#fff" }}>
+        style={{ marginTop: "1rem", backgroundColor: "#4635B1", color: "white" }}>
         Back to Main Page
       </Button>
     </Flex>

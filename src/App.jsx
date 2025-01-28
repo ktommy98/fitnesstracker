@@ -259,31 +259,36 @@ export default function App() {
             <Flex
               as="nav"
               direction="column"
-              backgroundColor="#f4f4f4"
+              backgroundColor="#1230AE"
               padding="1rem"
               width="15%"
-              boxShadow="2px 0 5px rgba(83, 2, 244, 0.1)"
+              boxShadow="2px 0 5px rgba(209, 204, 213, 0.99) 0)"
               gap="1rem"
             >
               <Link to="/recipes">
               <Flex alignItems="center" gap="10px" cursor="pointer">
-                <GiCook size={30} />
-                <Text fontWeight="bold">Recipes</Text>
+                <GiCook size={40} color="#C68FE6" />
+                <Text fontWeight="bold" style={{ color: "#fff" }}>Recipes</Text>
               </Flex>
               </Link>
               <Link to="/workoutplan">
               <Flex alignItems="center" gap="10px" cursor="pointer">
-                <GiWeightLiftingUp size={30} />
-                <Text fontWeight="bold">Workout plan</Text>
+                <GiWeightLiftingUp size={40} color="#C68FE6"/>
+                <Text fontWeight="bold" style={{ color: "#fff" }}>Workout Plan</Text>
               </Flex>
               </Link>
               <Link to="/profile">
                           <Flex alignItems="center" gap="10px" cursor="pointer">
-                            <GiSuspicious size={30} />
-                            <Text fontWeight="bold">Profile</Text>
+                            <GiSuspicious size={40} color="#C68FE6"/>
+                            <Text fontWeight="bold" style={{ color: "#fff" }}>Profile</Text>
                           </Flex>
                         </Link>
+                        <Button onClick={signOut}
+              style={{ marginTop: "57rem", backgroundColor: "#FFF7F7", color: "black" }}>
+                Sign Out
+              </Button>
             </Flex>
+            
 
             <Flex
               className="App"
@@ -293,8 +298,8 @@ export default function App() {
               width="70%"
               margin="0 auto"
             >
-              <Heading level={1} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <GiBroccoli size={40} color="green"/> Food Tracker
+              <Heading level={1} style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                <GiBroccoli size={60} color="#16C47F"/> Food Tracker
               </Heading>
               <Text>Your Daily Calorie Goal: {dailyCalories} kcal</Text>
 
@@ -310,15 +315,15 @@ export default function App() {
                 boxShadow="0 4px 10px rgba(0, 0, 0, 0.1)"
               >
                 <Flex direction="column" alignItems="center">
-                  <Text fontSize="1.5rem" fontWeight="bold">{totalCalories.toFixed(0)}</Text>
+                  <Text fontSize="2rem" fontWeight="bold">{totalCalories.toFixed(0)}</Text>
                   <Text>Eaten</Text>
                 </Flex>
                 <Flex direction="column" alignItems="center">
-                  <Text fontSize="1.5rem" fontWeight="bold">{(dailyCalories - totalCalories).toFixed(0)}</Text>
+                  <Text fontSize="2rem" fontWeight="bold">{(dailyCalories - totalCalories).toFixed(0)}</Text>
                   <Text>Remaining</Text>
                 </Flex>
                 <Flex direction="column" alignItems="center">
-                  <Text fontSize="1.5rem" fontWeight="bold">0</Text>
+                  <Text fontSize="2rem" fontWeight="bold">0</Text>
                   <Text>Burned</Text>
                 </Flex>
               </Flex>
@@ -349,30 +354,58 @@ export default function App() {
               </Flex>
 
               <Flex justifyContent="center" gap="1rem" margin="2rem 0">
+              <Button
+                variation={mealType === "breakfast" ? "primary" : "default"}
+                onClick={() => setMealType("breakfast")}
+                style={{
+                  backgroundColor: mealType === "breakfast" ? "#8a2be2" : "#d8bfd8",
+                  color: "#fff",
+                  border: "none",
+                  padding: "10px 20px",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+              >Breakfast</Button>
+
+<Button
+                variation={mealType === "lunch" ? "primary" : "default"}
+                onClick={() => setMealType("lunch")}
+                style={{
+                  backgroundColor: mealType === "lunch" ? "#8a2be2" : "#d8bfd8",
+                  color: "#fff",
+                  border: "none",
+                  padding: "10px 20px",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+              >Lunch</Button>
+
                 <Button
-                  variation={mealType === "breakfast" ? "primary" : "default"}
-                  onClick={() => setMealType("breakfast")}
-                >
-                  Breakfast
-                </Button>
+                variation={mealType === "dinner" ? "primary" : "default"}
+                onClick={() => setMealType("dinner")}
+                style={{
+                  backgroundColor: mealType === "dinner" ? "#8a2be2" : "#d8bfd8",
+                  color: "#fff",
+                  border: "none",
+                  padding: "10px 20px",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+              >Dinner</Button>
+
                 <Button
-                  variation={mealType === "lunch" ? "primary" : "default"}
-                  onClick={() => setMealType("lunch")}
-                >
-                  Lunch
-                </Button>
-                <Button
-                  variation={mealType === "dinner" ? "primary" : "default"}
-                  onClick={() => setMealType("dinner")}
-                >
-                  Dinner
-                </Button>
-                <Button
-                  variation={mealType === "snacks" ? "primary" : "default"}
-                  onClick={() => setMealType("snacks")}
-                >
-                  Snacks
-                </Button>
+                variation={mealType === "snacks" ? "primary" : "default"}
+                onClick={() => setMealType("snacks")}
+                style={{
+                  backgroundColor: mealType === "snacks" ? "#8a2be2" : "#d8bfd8",
+                  color: "#fff",
+                  border: "none",
+                  padding: "10px 20px",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+              >Snacks</Button>
+
               </Flex>
 
               <View as="form" margin="3rem 0" onSubmit={calculateCalories}>
@@ -400,9 +433,22 @@ export default function App() {
                     required
                   />
 
-                  <Button type="submit" variation="primary">
-                    Add to {mealType.charAt(0).toUpperCase() + mealType.slice(1)}
-                  </Button>
+              <Button
+                type="submit"
+                variation="primary"
+                style={{
+                  backgroundColor: "#8a2be2", 
+                  color: "#fff",
+                  border: "none",
+                  padding: "10px 20px",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s ease",
+                }}
+              >
+                Add to {mealType.charAt(0).toUpperCase() + mealType.slice(1)}
+              </Button>
+
                 </Flex>
               </View>
 
@@ -443,10 +489,7 @@ export default function App() {
                   </Flex>
                 ))}
               </Grid>
-              <Button onClick={signOut}
-              style={{ marginTop: "1rem", backgroundColor: "#0073e6", color: "#fff" }}>
-                Sign Out
-              </Button>
+             
             </Flex>
             </Flex>
           )}

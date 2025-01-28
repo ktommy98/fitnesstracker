@@ -66,10 +66,10 @@ function Profile() {
             <img src="/src/images/fittrack.png" alt="profile for user" className="img-fluid profile-image"/>
             <h2>Fitness Tracker</h2>
           </div>
-          <div className="row g-0 justify-content-end my-4 px-3">
+          <div className="row g-0 justify-content-end my-4 px-4">
             <input type="file" id="file-input" className="d-none" onChange={(e)=>{console.log(e)}}/>
-            <label className="col-2 profile-img-action-btn me-1" htmlFor="file-input">
-              Change 
+            <label className="col-2 profile-img-action-btn me-2" htmlFor="file-input">
+              Change
             </label>
             <button className="col-2 profile-img-action-btn">Delete</button>
           </div>
@@ -78,7 +78,7 @@ function Profile() {
            <button className="profile-img-action-btn col-4">Delete</button>
         </div> */}
           <div className="row g-0 border-top p-3">
-            <h5 className="mb-2">Account Setting</h5>
+            <h5 className="mb-2">Account Settings</h5>
             <div className="col-7 mt-3">
               <h6 className="mb-3">Language</h6>
               <Select
