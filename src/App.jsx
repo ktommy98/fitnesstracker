@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./index.css";
 import Recipes from "./pages/recipes";
 import Workoutplan from "./pages/workoutplan";
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile/profile";
 
 
 Amplify.configure(outputs);

@@ -1,0 +1,132 @@
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .profile-img-action-btn {
+    border: none;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .lang-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .profile-tabs div {
+    text-align: center;
+    background-color: #f6f6fe;
+    padding: 15px 5px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .profile-tabs .active-tab {
+     background-color: white;
+  }
+  /* .edit-btn{
+      border: none;
+      background-color: #5750D4;
+      color: white;
+      padding: 5px 10px;
+  } */
+  .update-btn,
+  .edit-btn {
+    color: white;
+    border: none;
+  }
+  .cancel-btn {
+    border: none;
+  }
+  .themes-container>div{
+      border: 1px solid #8E91D1;
+      padding: 2px;
+      border-radius: 5px;
+  }
+  .themes-container div div {
+      width: 100%;
+      height: 30px;
+      border-radius:5px;
+      cursor: pointer;
+  }
+  .theme-1-box{
+      background-color: #8ED82D;
+  }
+  .theme-2-box{
+      background-color: #FF3D43;
+  }
+  .theme-3-box{
+      background-color: #5750d4;
+  }
+  .edit-response-popup{
+    background-color: #fff;
+    z-index: 2;
+    text-align: center;
+    width: 20%;
+    border: none;
+    box-shadow: 1px 1px 15px #bcdafc;
+  }
+  .edit-response-popup button{
+    border: none;
+    color: white;
+  }
+  .profile-container{
+    background-color: #F8FAFE;
+  }
+  .child-container{
+    background-color: white;
+  }
+  .active-theme{
+    border: 1px solid black;
+  }
+  .theme-1 .profile-img-action-btn{
+    color: #8ED82D;
+  }
+  .theme-2 .profile-img-action-btn{
+    color: #ff3D43;
+  }
+  .theme-3 .profile-img-action-btn{
+    color: #5750d4;
+  }
+  .theme-1 .profile-tabs .active-tab {
+    border-bottom: 3px solid #8ED82D;
+  }
+  .theme-2 .profile-tabs .active-tab {
+    border-bottom: 3px solid #ff3D43;
+  }
+  .theme-3 .profile-tabs .active-tab {
+    border-bottom: 3px solid #5750d4;
+  }
+  .theme-1 .update-btn,.theme-1 .edit-btn{
+    background-color: #8ED82D;
+  }
+  .theme-1 .cancel-btn{
+    color: #8ED82D;
+  }
+  
+  .theme-2 .update-btn,.theme-2 .edit-btn{
+    background-color: #ff3D43;
+  }
+  .theme-2 .cancel-btn{
+    color: #ff3D43;
+  }
+  
+  .theme-3 .update-btn,.theme-3 .edit-btn{
+    background-color: #5750d4;
+  }
+  .theme-3 .cancel-btn{
+    color: #5750d4;
+  }
+  .theme-1 .edit-response-popup button{
+    background-color: #8ED82D;
+  }
+  .theme-2 .edit-response-popup button{
+    background-color: #ff3D43;
+  }
+  .theme-3 .edit-response-popup button{
+    background-color: #5750d4;
+  }
