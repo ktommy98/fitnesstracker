@@ -17,9 +17,9 @@ import { GiCook, GiWeightLiftingUp, GiBroccoli, GiSuspicious } from "react-icons
 import outputs from "../amplify_outputs.json";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./index.css";
-import Recipes from "./recipes";
-import Workoutplan from "./workoutplan";
-import Profile from "./profile";
+import Recipes from "./pages/recipes";
+import Workoutplan from "./pages/workoutplan";
+import Profile from "./pages/profile";
 
 
 Amplify.configure(outputs);
@@ -116,7 +116,16 @@ export default function App() {
     tofu: { calories: 144, carbs: 3.9, protein: 15.7, fat: 8.1 },
     steak: { calories: 271, carbs: 0, protein: 25.9, fat: 19.4 },
     milk: { calories: 42, carbs: 5, protein: 3.4, fat: 1 },
+    spinach: { calories: 23, carbs: 3.6, protein: 2.9, fat: 0.4 },
+    cucumber: { calories: 16, carbs: 3.6, protein: 0.7, fat: 0.1 },
+    carrot: { calories: 41, carbs: 9.6, protein: 0.9, fat: 0.2 },
+    lentils: { calories: 116, carbs: 20, protein: 9, fat: 0.4 },
+    chickpeas: { calories: 164, carbs: 27.4, protein: 8.9, fat: 2.6 },
+    turkey: { calories: 135, carbs: 0, protein: 30, fat: 1 },
+    pork: { calories: 242, carbs: 0, protein: 27, fat: 14 },
+    cod: { calories: 82, carbs: 0, protein: 18, fat: 0.7 },
   };
+  
   
 
   const [mealType, setMealType] = useState("breakfast");
@@ -253,7 +262,7 @@ export default function App() {
               backgroundColor="#f4f4f4"
               padding="1rem"
               width="15%"
-              boxShadow="2px 0 5px rgba(0,0,0,0.1)"
+              boxShadow="2px 0 5px rgba(83, 2, 244, 0.1)"
               gap="1rem"
             >
               <Link to="/recipes">

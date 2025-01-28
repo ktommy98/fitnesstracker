@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Heading, Text, Button } from "@aws-amplify/ui-react";
 import { useNavigate } from "react-router-dom";
 
+
 export default function Recipes() {
   const navigate = useNavigate();
 
@@ -54,7 +55,7 @@ export default function Recipes() {
       <Flex direction="column" alignItems="center" padding="2rem" width="100%" maxWidth="800px">
         <Heading level={2}>French Toast</Heading>
         <img
-          src="/src/images/french_toast.jfif"
+          src="/images/french_toast.jfif"
           alt="French Toast"
           style={{ width: "100%", borderRadius: "10px", marginBottom: "1rem" }}
         />
