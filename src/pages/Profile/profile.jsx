@@ -64,7 +64,7 @@ function Profile() {
         <div className="col-4">
           <div className="text-center mb-2">
             <img src="/src/images/fittrack.png" alt="profile for user" className="img-fluid profile-image"/>
-            <h6>FitTomi</h6>
+            <h2>Fitness Tracker</h2>
           </div>
           <div className="row g-0 justify-content-end my-4 px-3">
             <input type="file" id="file-input" className="d-none" onChange={(e)=>{console.log(e)}}/>
@@ -79,7 +79,7 @@ function Profile() {
         </div> */}
           <div className="row g-0 border-top p-3">
             <h5 className="mb-2">Account Setting</h5>
-            <div className="col-5 mt-3">
+            <div className="col-7 mt-3">
               <h6 className="mb-3">Language</h6>
               <Select
                 options={languages}

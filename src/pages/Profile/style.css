@@ -60,7 +60,7 @@
       background-color: #FF3D43;
   }
   .theme-3-box{
-      background-color: #5750d4;
+      background-color: #600ce8;
   }
   .edit-response-popup{
     background-color: #fff;
@@ -87,19 +87,19 @@
     color: #8ED82D;
   }
   .theme-2 .profile-img-action-btn{
-    color: #ff3D43;
+    color: #f9a600;
   }
   .theme-3 .profile-img-action-btn{
-    color: #5750d4;
+    color: #600ce8;
   }
   .theme-1 .profile-tabs .active-tab {
     border-bottom: 3px solid #8ED82D;
   }
   .theme-2 .profile-tabs .active-tab {
-    border-bottom: 3px solid #ff3D43;
+    border-bottom: 3px solid #f9a600;
   }
   .theme-3 .profile-tabs .active-tab {
-    border-bottom: 3px solid #5750d4;
+    border-bottom: 3px solid #600ce8;
   }
   .theme-1 .update-btn,.theme-1 .edit-btn{
     background-color: #8ED82D;
@@ -109,24 +109,24 @@
   }
   
   .theme-2 .update-btn,.theme-2 .edit-btn{
-    background-color: #ff3D43;
+    background-color:#f9a600;
   }
   .theme-2 .cancel-btn{
-    color: #ff3D43;
+    color: #f9a600;
   }
   
   .theme-3 .update-btn,.theme-3 .edit-btn{
-    background-color: #5750d4;
+    background-color: #600ce8;
   }
   .theme-3 .cancel-btn{
-    color: #5750d4;
+    color: #600ce8;
   }
   .theme-1 .edit-response-popup button{
-    background-color: #8ED82D;
+    background-color: #000000;
   }
   .theme-2 .edit-response-popup button{
-    background-color: #ff3D43;
+    background-color: #f9a600;
   }
   .theme-3 .edit-response-popup button{
-    background-color: #5750d4;
+    background-color: #600ce8;
   }
