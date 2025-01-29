@@ -18,7 +18,7 @@ import outputs from "../amplify_outputs.json";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./index.css";
 import Recipes from "./pages/recipes";
-import Workoutplan from "./pages/workoutplan";
+import Workoutplan from "./pages/WorkoutPlan/workoutplan";
 import Profile from "./pages/Profile/profile";
 
 
