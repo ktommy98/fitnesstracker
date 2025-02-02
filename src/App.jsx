@@ -305,7 +305,8 @@ export default function App() {
                 alignItems: "center", 
                 gap: "5px" ,
                 padding: "5px",
-                marginBottom: "10px"}}>
+                marginBottom: "5px",
+                marginTop:"5px"}}>
                 <GiBroccoli size={60} color="#16C47F"/> Food Tracker
               </Heading>
               <Text>Your Daily Calorie Goal: {dailyCalories} kcal</Text>
