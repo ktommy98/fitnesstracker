@@ -250,14 +250,15 @@ export default function App() {
                 <option value="active">Active</option>
                 <option value="veryActive">Very Active</option>
               </select>
-              <Button type="submit" variation="primary">
+              <Button type="submit" variation="primary"
+              style={{ marginTop: "1rem", backgroundColor: "#4635B1", color: "white" }}>
                 Submit
               </Button>
             </Flex>
           ) : (
             <Flex direction="row" width="100%" height="150vh">
             <Flex
-              as="nav"
+              as="div"
               direction="column"
               backgroundColor="#1230AE"
               padding="1rem"
@@ -298,7 +299,11 @@ export default function App() {
               width="70%"
               margin="0 auto"
             >
-              <Heading level={1} style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+              <Heading level={1} style={{ display: "flex", 
+                alignItems: "center", 
+                gap: "5px" ,
+                padding: "5px",
+                marginBottom: "10px"}}>
                 <GiBroccoli size={60} color="#16C47F"/> Food Tracker
               </Heading>
               <Text>Your Daily Calorie Goal: {dailyCalories} kcal</Text>
@@ -367,7 +372,7 @@ export default function App() {
                 }}
               >Breakfast</Button>
 
-<Button
+              <Button
                 variation={mealType === "lunch" ? "primary" : "default"}
                 onClick={() => setMealType("lunch")}
                 style={{
