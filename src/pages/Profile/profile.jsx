@@ -63,7 +63,7 @@ function Profile() {
       <div className="col-10 row g-0 border rounded-3">
         <div className="col-4">
           <div className="text-center mb-2">
-            <img src="/src/images/fittrack.png" alt="profile for user" className="img-fluid profile-image"/>
+            <img src="/images/fittrack.png" alt="profile for user" className="img-fluid profile-image"/>
             <h2>Fitness Tracker</h2>
           </div>
           <div className="row g-0 justify-content-end my-4 px-4">
