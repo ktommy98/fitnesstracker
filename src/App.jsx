@@ -20,6 +20,8 @@ import "./index.css";
 import Recipes from "./pages/recipes";
 import Workoutplan from "./pages/WorkoutPlan/workoutplan";
 import Profile from "./pages/Profile/profile";
+import Ebook1 from "./pages/WorkoutPlan/Ebook1";
+import Ebook2 from "./pages/WorkoutPlan/Ebook2";
 
 
 Amplify.configure(outputs);
@@ -506,6 +508,8 @@ export default function App() {
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/workoutplan" element={<Workoutplan />} />
         <Route path="/profile" element={<Profile userInfo={userInfo} onUpdate={handleProfileUpdate} />} />
+        <Route path="/ebook1" element={<Ebook1 />} />
+        <Route path="/ebook2" element={<Ebook2 />} />
         </Routes>
       </Router>
   );

@@ -67,7 +67,7 @@ export default function WorkoutPlan() {
 
       {/* Beviteli mező */}
       <TextField
-        placeholder="Enter your workout goal..."
+        placeholder="Enter your workout goal...(chest,biceps...)"
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
         width="100%"
@@ -126,6 +126,30 @@ export default function WorkoutPlan() {
       >
         Back to Main Page
       </Button>
+
+       {/* E-book ajánlás belső navigációval */}
+       <Text fontSize="1.2rem" fontWeight="bold" marginTop="2rem" textAlign="center">
+        If you want to learn from the best, try one of our ebooks:
+      </Text>
+
+      <Flex direction="column" alignItems="center" marginTop="1rem" gap="0.5rem">
+        <Button 
+          onClick={() => navigate("/Ebook1")}
+          variation="link"
+          style={{ fontSize: "1.2rem", fontWeight: "bold", textDecoration: "none", color: "#6A0DAD" }}
+        >
+          Jay Cutler Get Shredded EXTREME Edition
+        </Button>
+        </Flex>
+        <Flex direction="column" alignItems="center" marginTop="1rem" gap="0.5rem">
+        <Button 
+          onClick={() => navigate("/Ebook2")}
+          variation="link"
+          style={{ fontSize: "1.2rem", fontWeight: "bold", textDecoration: "none", color: "#6A0DAD" }}
+        >
+          Jay Cutler Mass-Ter Plan
+        </Button>
+        </Flex>
     </Flex>
   );
 }
