@@ -36,10 +36,11 @@
   } */
   .update-btn,
   .edit-btn {
-    color: white;
+    color: black;
     border: none;
   }
   .cancel-btn {
+    color: black;
     border: none;
   }
   .themes-container>div{
