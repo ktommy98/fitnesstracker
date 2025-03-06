@@ -1,0 +1,55 @@
+﻿@page "/friends"
+
+<PageTitle>Friends</PageTitle>
+
+<div class="friends-container">
+    <div class="content">
+        <img src="images/friends.png" alt="Friends Eating Together" class="friends-image" />
+        <p class="friends-text">
+            Healthy eating is more fun with friends! Connect with friends and share nutrition summaries, your favorite recipes, and more!
+        </p>
+        <button class="add-friends-button">Add Your Friends...</button>
+    </div>
+</div>
+
+<style>
+    .friends-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .friends-image {
+        width: 600px; /* Változtathatod a méretet */
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .friends-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        max-width: 600px;
+    }
+      .add-friends-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-friends-button:hover {
+        background-color: #0056b3;
+    }
+</style>

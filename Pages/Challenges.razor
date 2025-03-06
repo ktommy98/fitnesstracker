@@ -1,0 +1,82 @@
+﻿@page "/challenges"
+
+<PageTitle>Challenges</PageTitle>
+
+<h1 class="title">Try out our challenges!</h1>
+
+<div class="challenge-grid">
+    @foreach (var challenge in challenges)
+    {
+        <div class="challenge-card @challenge.Color" @onclick="() => StartTimer(challenge)">
+            @if (challenge.IsRunning)
+            {
+                <span>@FormatElapsedTime(challenge.ElapsedSeconds)</span>
+                <button class="give-up-btn" @onclick="(e) => StopTimer(challenge, e)">Give Up</button>
+            }
+            else
+            {
+                <span>@challenge.Name</span>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    class Challenge
+    {
+        public string Name { get; set; }
+        public string Color { get; set; }
+        public bool IsRunning { get; set; } = false;
+        public int ElapsedSeconds { get; set; } = 0;
+        public System.Threading.Timer? Timer { get; set; }
+    }
+
+    List<Challenge> challenges = new List<Challenge>
+    {
+        new Challenge { Name = "No Chocolate", Color = "no-chocolate" },
+        new Challenge { Name = "No Sugar", Color = "green" },
+        new Challenge { Name = "No Candy", Color = "red" },
+        new Challenge { Name = "No Junkfood", Color = "blue" },
+        new Challenge { Name = "No Coffee", Color = "orange" },
+        new Challenge { Name = "No Alcohol", Color = "purple" },
+        new Challenge { Name = "No Pizza", Color = "yellow" },
+        new Challenge { Name = "No Meat", Color = "gray" },
+        new Challenge { Name = "No Chips", Color = "pink" }
+    };
+
+    void StartTimer(Challenge challenge)
+    {
+        if (!challenge.IsRunning)
+        {
+            challenge.IsRunning = true;
+            challenge.ElapsedSeconds = 0;
+            challenge.Timer = new System.Threading.Timer(_ =>
+            {
+                challenge.ElapsedSeconds++;
+                InvokeAsync(StateHasChanged);
+            }, null, 1000, 1000);
+        }
+    }
+
+    void StopTimer(Challenge challenge, MouseEventArgs e)
+    {
+        if (challenge.Timer != null)
+        {
+            challenge.Timer.Dispose();
+            challenge.Timer = null;
+        }
+        challenge.IsRunning = false;
+        challenge.ElapsedSeconds = 0;
+        InvokeAsync(StateHasChanged);
+    }
+
+    string FormatElapsedTime(int elapsedSeconds)
+    {
+        int days = elapsedSeconds / 86400;
+        int hours = (elapsedSeconds % 86400) / 3600;
+        int minutes = (elapsedSeconds % 3600) / 60;
+        int seconds = elapsedSeconds % 60;
+
+        return $"{days} days, {hours} hours, {minutes} minutes, {seconds} seconds";
+    }
+}
