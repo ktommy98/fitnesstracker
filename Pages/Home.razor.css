@@ -1,0 +1,139 @@
+.profile-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    background: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #ddd;
+}
+
+.profile-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.profile-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.profile-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #6c757d;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete {
+    background-color: #dc3545;
+}
+
+.account-settings {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.language-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.themes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.theme-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.green { background: #7FFF00; }
+.red { background: #DC143C; }
+.blue { background: #4635B1; }
+
+.back-btn {
+    margin-top: 20px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.active {
+    border-bottom: 3px solid #007bff;
+}
+
+.profile-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-box label {
+    font-weight: bold;
+}
+
+.info-box input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background: #f1f3f5;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+.edit-btn:disabled {
+    background: #ccc;
+}

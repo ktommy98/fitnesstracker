@@ -19,7 +19,6 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./index.css";
 import Recipes from "./pages/recipes";
 import Workoutplan from "./pages/WorkoutPlan/workoutplan";
-import Profile from "./pages/Profile/profile";
 import Ebook1 from "./pages/WorkoutPlan/Ebook1";
 import Ebook2 from "./pages/WorkoutPlan/Ebook2";
 
@@ -280,12 +279,12 @@ export default function App() {
                 <Text fontWeight="bold" style={{ color: "#fff" }}>Workout Plan</Text>
               </Flex>
               </Link>
-              <Link to="/profile">
-                          <Flex alignItems="center" gap="10px" cursor="pointer">
-                            <GiSuspicious size={40} color="#C68FE6"/>
-                            <Text fontWeight="bold" style={{ color: "#fff" }}>Profile</Text>
-                          </Flex>
-                        </Link>
+              <div onClick={() => window.open("http://localhost:5224", "_blank", "width=1600,height=860,noopener,noreferrer")} style={{ cursor: "pointer" }}>
+                <Flex alignItems="center" gap="10px">
+                  <GiSuspicious size={40} color="#C68FE6"/>
+                  <Text fontWeight="bold" style={{ color: "#fff" }}>Profile</Text>
+                </Flex>
+              </div>
                         <Button onClick={signOut}
               style={{ marginTop: "57rem", backgroundColor: "#FFF7F7", color: "black" }}>
                 Sign Out
@@ -508,7 +507,6 @@ export default function App() {
           />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/workoutplan" element={<Workoutplan />} />
-        <Route path="/profile" element={<Profile userInfo={userInfo} onUpdate={handleProfileUpdate} />} />
         <Route path="/ebook1" element={<Ebook1 />} />
         <Route path="/ebook2" element={<Ebook2 />} />
         </Routes>

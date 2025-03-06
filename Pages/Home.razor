@@ -2,5 +2,59 @@
 
 <PageTitle>Profile</PageTitle>
 
-<h1>Hello, world!</h1>
+<link rel="stylesheet" href="css/Profile.css" />
 
+<div class="profile-container">
+    <div class="sidebar">
+        <img src="images/profile.png" alt="Profile Logo" class="profile-logo" />
+        <h2>Me</h2>
+
+        <div class="profile-actions">
+            <button class="profile-btn">Change</button>
+            <button class="profile-btn delete">Delete</button>
+        </div>
+
+        <div class="account-settings">
+            <h3>Account Settings</h3>
+
+            <label>Language</label>
+            <select class="language-select">
+                <option>🇺🇸 English</option>
+                <option>🇩🇪 Deutsch</option>
+                <option>🇫🇷 Français</option>
+            </select>
+
+            <label>Themes</label>
+            <div class="themes">
+                <div class="theme-box green"></div>
+                <div class="theme-box red"></div>
+                <div class="theme-box blue"></div>
+            </div>
+        </div>
+
+        <button class="back-btn">Back to Main Page</button>
+    </div>
+
+    <div class="profile-content">
+        <div class="tabs">
+            <button class="tab active">General</button>
+            <button class="tab">Personal</button>
+            <button class="tab">Address</button>
+            <button class="tab">Social</button>
+        </div>
+
+        <div class="profile-info">
+            <div class="info-box">
+                <label>Username</label>
+                <input type="text" value="ktommy" readonly />
+            </div>
+
+            <div class="info-box">
+                <label>Email</label>
+                <input type="text" value="kthomasfmm@gmail.com" readonly />
+            </div>
+
+            <button class="edit-btn">EDIT</button>
+        </div>
+    </div>
+</div>
