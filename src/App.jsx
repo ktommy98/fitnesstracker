@@ -282,16 +282,16 @@ export default function App() {
               </Button>
             </Flex>
           ) : (
-            <Flex direction="row" width="100%" height="150vh">
+            <Flex direction="row" width="100%" height="auto">
             <Flex
-              as="div"
-              direction="column"
-              backgroundColor="#1230AE"
-              padding="1rem"
-              width="15%"
-              boxShadow="2px 0 5px rgba(209, 204, 213, 0.99) 0)"
-              gap="1rem"
-            >
+                className="sidebar-menu"
+                as="div"
+                direction="column"
+                padding="1rem"
+                width="15%"
+                minHeight="100vh"
+                boxShadow="2px 0 5px rgba(0, 0, 0, 0.1)"
+              >
               <Link to="/recipes">
               <Flex alignItems="center" gap="10px" cursor="pointer">
                 <GiCook size={40} color="#C68FE6" />
@@ -310,8 +310,8 @@ export default function App() {
                   <Text fontWeight="bold" style={{ color: "#fff" }}>Profile</Text>
                 </Flex>
               </div>
-                        <Button onClick={signOut}
-              style={{ marginTop: "57rem", backgroundColor: "#FFF7F7", color: "black" }}>
+              <Button onClick={signOut}
+              style={{ marginTop: "50rem", backgroundColor: "#FFF7F7", color: "black" }}>
                 Sign Out
               </Button>
             </Flex>
