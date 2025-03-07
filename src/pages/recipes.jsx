@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const recipes = [
   {
     title: "French Toast",
-    image: "/images/french_toast.jfif",
+    image: "/images/french_toast.jpg",
     serving: "1",
     ingredients: [
       "250g tojásfehérje (kb. 7-8 M-es tojásból)",
@@ -47,7 +47,7 @@ const recipes = [
   },
   {
     title: "Sajtos Omlett Édesburgonyával",
-    image: "/images/sweet_potato_omlette.jfif",
+    image: "/images/sweet_potato_omlette.jpg",
     serving: "1",
     ingredients: [
       "300g édesburgonya",
@@ -66,7 +66,7 @@ const recipes = [
   },
   {
     title: "Almás Protein Palacsinta",
-    image: "/images/apple_protein_pancake.jfif",
+    image: "/images/apple_protein_pancake.jpg",
     serving: "1",
     ingredients: [
       "200g tojásfehérje",
@@ -83,6 +83,52 @@ const recipes = [
       protein: "32.5g",
       carbs: "60g",
       fat: "2.5g",
+    },
+  },
+  {
+  title: "Jelly Mousse",
+    image: "/images/high-protein-jello-mousse.jpg",
+    serving: "1",
+    ingredients: [
+      "250g sovány krémtúró (Aldi - New Lifestyle 66 kcal/100g)",
+      "10g fehérjepor (vaníliás Myprotein Impact Whey vagy vegán fehérjepor)",
+      "10g zselatin",
+      "100g áfonya/eper/málna",
+      "Édesítőszer, FlavDrops",
+    ],
+    preparation:
+      "Tedd a krémtúrót egy tálba és adj hozzá annyi vizet, hogy összekeverve krémes állaga legyen, majd add hozzá a fehérjeport és édesítsd ízlés szerint. Ha szeretnéd, bele turmixolhatsz a krémbe egy kicsit a gyümölcsből, hogy egy jó színt adjon neki. Keverd össze a zselatint egy kis forró vízzel és amikor teljesen feloldódott, fokozatosan kevergetve add hozzá a túrókrémet, majd szórd bele a gyümölcsöt és alaposan keverd össze. Helyezd a hűtőbe 3-4 órára, amíg megszilárdul.",
+    nutrition: {
+      calories: "315 Kcal",
+      protein: "48g",
+      carbs: "25g",
+      fat: "1.5g",
+    },
+  },
+  {
+    title: "Thai Csirkés Rizstészta",
+    image: "/images/thai_noodles.jpg",
+    serving: "2",
+    ingredients: [
+      "120g rizstészta",
+      "200g csirkemell",
+      "300g csiperkegomba",
+      "100g vöröshagyma",
+      "100g bébirépa",
+      "100g zöldbab",
+      "100g wok mix zöldség",
+      "50ml szójaszósz - Chin-Su márka",
+      "3ml olívaolaj",
+      "2g szezámmag",
+      "Fűszerek: só, bors, fokhagymapor, thai fűszerek, Sriracha/chili szósz",
+    ],
+    preparation:
+      "Főzd meg a rizstésztát a csomagolás szerint. Egy serpenyőben olívaolajon párold a hagymát, majd add hozzá a csirkét apró kockára vágva. Ezután add hozzá a gombát és a zöldségeket, és főzd, amíg a csirke és gomba kiengedett leve elfő. Fűszerezd ízlés szerint, majd keverd hozzá a rizstésztát és a szójaszószt, és pirítsd 1 percig. Ha szeretnéd, adj hozzá egy kevés Sriracha szószt. A végén szórd meg szezámmaggal.",
+    nutrition: {
+      calories: "483 Kcal (1 adag)",
+      protein: "44.4g",
+      carbs: "68.2g",
+      fat: "4g",
     },
   },
 ];
@@ -120,7 +166,11 @@ export default function Recipes() {
               width="45%"
             >
               <Heading level={2}>{recipe.title}</Heading>
-              <Image src={recipe.image} alt={recipe.title} width="100%" borderRadius="10px" />
+              <Image
+                src={recipe.image}
+                alt={recipe.title}
+                style={{ maxWidth: "400px", maxHeight: "400px", borderRadius: "10px" }}
+              />
               <Text>
                 <strong>Adag:</strong> {recipe.serving}
               </Text>
@@ -149,13 +199,37 @@ export default function Recipes() {
       </Flex>
 
       <Flex direction="row" gap="1rem" marginTop="2rem">
-        <Button onClick={prevPage} variation="primary">
-          Last
-        </Button>
-        <Button onClick={nextPage} variation="primary">
-          Next
-        </Button>
-      </Flex>
+  <Button
+    onClick={prevPage}
+    variation="primary"
+    style={{
+      backgroundColor: "#FF5733", // Narancsos-piros
+      color: "white",
+      border: "none",
+      padding: "10px 20px",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "background-color 0.3s ease",
+    }}
+  >
+    Last
+  </Button>
+  <Button
+    onClick={nextPage}
+    variation="primary"
+    style={{
+      backgroundColor: "#3498DB", // Kék
+      color: "white",
+      border: "none",
+      padding: "10px 20px",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "background-color 0.3s ease",
+    }}
+  >
+    Next
+  </Button>
+</Flex>
 
       <Button
         onClick={() => navigate("/")}

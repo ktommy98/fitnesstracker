@@ -46,9 +46,10 @@ export default function App() {
     const form = new FormData(event.target);
 
     const gender = form.get("gender");
-    const age = parseFloat(form.get("age"));
-    const height = parseFloat(form.get("height"));
-    const weight = parseFloat(form.get("weight"));
+    const age = Math.max(0, Math.min(100, parseFloat(form.get("age"))));
+    const height = Math.max(0, Math.min(250, parseFloat(form.get("height"))));
+    const weight = Math.max(0, Math.min(300, parseFloat(form.get("weight"))));
+    const goalWeight = Math.max(0, Math.min(300, parseFloat(form.get("goalWeight"))));
     const activityLevel = form.get("activityLevel");
 
     const newUserInfo = {
@@ -224,24 +225,48 @@ export default function App() {
                 placeholder="Age"
                 type="number"
                 required
+                onChange={(e) => {
+                  let value = parseInt(e.target.value, 10);
+                  if (isNaN(value) || value < 0) value = 0;
+                  if (value > 100) value = 100;
+                  e.target.value = value;
+                }}
               />
               <TextField
                 name="height"
                 placeholder="Height (cm)"
                 type="number"
                 required
+                onChange={(e) => {
+                  let value = parseFloat(e.target.value);
+                  if (isNaN(value) || value < 0) value = 0;
+                  if (value > 250) value = 250;
+                  e.target.value = value;
+                }}
               />
               <TextField
                 name="weight"
                 placeholder="Weight (kg)"
                 type="number"
                 required
+                onChange={(e) => {
+                  let value = parseFloat(e.target.value);
+                  if (isNaN(value) || value < 0) value = 0;
+                  if (value > 300) value = 300;
+                  e.target.value = value;
+                }}
               />
               <TextField
                 name="goalWeight"
                 placeholder="Goal Weight (kg)"
                 type="number"
                 required
+                onChange={(e) => {
+                  let value = parseFloat(e.target.value);
+                  if (isNaN(value) || value < 0) value = 0;
+                  if (value > 300) value = 300;
+                  e.target.value = value;
+                }}
               />
               <select name="activityLevel" required>
                 <option value="">Select Activity Level</option>
