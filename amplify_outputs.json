@@ -6,7 +6,12 @@
     "identity_pool_id": "eu-north-1:540eba16-2336-4b82-b42d-3af626cc4d78",
     "mfa_methods": [],
     "standard_required_attributes": [
-      "email"
+      "email",
+      "birthdate",
+      "custom:age",
+      "custom:height",
+      "custom:weight",
+      "custom:goalWeight"
     ],
     "username_attributes": [
       "email"
@@ -35,8 +40,8 @@
     "model_introspection": {
       "version": 1,
       "models": {
-        "Expense": {
-          "name": "Expense",
+        "UserProfile": {
+          "name": "UserProfile",
           "fields": {
             "id": {
               "name": "id",
@@ -45,15 +50,36 @@
               "isRequired": true,
               "attributes": []
             },
-            "name": {
-              "name": "name",
+            "email": {
+              "name": "email",
               "isArray": false,
               "type": "String",
+              "isRequired": true,
+              "attributes": []
+            },
+            "age": {
+              "name": "age",
+              "isArray": false,
+              "type": "Int",
               "isRequired": false,
               "attributes": []
             },
-            "amount": {
-              "name": "amount",
+            "height": {
+              "name": "height",
+              "isArray": false,
+              "type": "Float",
+              "isRequired": false,
+              "attributes": []
+            },
+            "weight": {
+              "name": "weight",
+              "isArray": false,
+              "type": "Float",
+              "isRequired": false,
+              "attributes": []
+            },
+            "goalWeight": {
+              "name": "goalWeight",
               "isArray": false,
               "type": "Float",
               "isRequired": false,
@@ -77,7 +103,7 @@
             }
           },
           "syncable": true,
-          "pluralName": "Expenses",
+          "pluralName": "UserProfiles",
           "attributes": [
             {
               "type": "model",

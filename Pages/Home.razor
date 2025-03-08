@@ -2,59 +2,69 @@
 
 <PageTitle>Profile</PageTitle>
 
-<link rel="stylesheet" href="css/Profile.css" />
+<link rel="stylesheet" href="css/Home.razor.css" />
 
 <div class="profile-container">
     <div class="sidebar">
         <img src="images/profile.png" alt="Profile Logo" class="profile-logo" />
         <h2>Me</h2>
-
-        <div class="profile-actions">
-            <button class="profile-btn">Change</button>
-            <button class="profile-btn delete">Delete</button>
-        </div>
-
-        <div class="account-settings">
-            <h3>Account Settings</h3>
-
-            <label>Language</label>
-            <select class="language-select">
-                <option>🇺🇸 English</option>
-                <option>🇩🇪 Deutsch</option>
-                <option>🇫🇷 Français</option>
-            </select>
-
-            <label>Themes</label>
-            <div class="themes">
-                <div class="theme-box green"></div>
-                <div class="theme-box red"></div>
-                <div class="theme-box blue"></div>
-            </div>
-        </div>
-
-        <button class="back-btn">Back to Main Page</button>
     </div>
-
     <div class="profile-content">
         <div class="tabs">
-            <button class="tab active">General</button>
-            <button class="tab">Personal</button>
-            <button class="tab">Address</button>
-            <button class="tab">Social</button>
+            <button class="tab @(activeTab == "General" ? "active" : "")" @onclick='() => SetActiveTab("General")'>General</button>
+            <button class="tab @(activeTab == "Personal" ? "active" : "")" @onclick='() => SetActiveTab("Personal")'>Personal</button>
+            <button class="tab @(activeTab == "Address" ? "active" : "")" @onclick='() => SetActiveTab("Address")'>Address</button>
+            <button class="tab @(activeTab == "Social" ? "active" : "")" @onclick='() => SetActiveTab("Social")'>Social</button>
         </div>
 
         <div class="profile-info">
-            <div class="info-box">
-                <label>Username</label>
-                <input type="text" value="ktommy" readonly />
-            </div>
-
-            <div class="info-box">
-                <label>Email</label>
-                <input type="text" value="kthomasfmm@gmail.com" readonly />
-            </div>
+            @if (activeTab == "General")
+            {
+                <h3>General Information</h3>
+                <div class="info-box">
+                    <label>Username</label>
+                    <input type="text" value="@Username" readonly />
+                </div>
+                <div class="info-box">
+                    <label>Email</label>
+                    <input type="text" value="@Email" readonly />
+                </div>
+                <div class="info-box">
+                    <label>Age</label>
+                    <input type="text" value="@Age" readonly />
+                </div>
+                <div class="info-box">
+                    <label>Height (cm)</label>
+                    <input type="text" value="@Height" readonly />
+                </div>
+                <div class="info-box">
+                    <label>Weight (kg)</label>
+                    <input type="text" value="@Weight" readonly />
+                </div>
+                <div class="info-box">
+                    <label>Goal Weight (kg)</label>
+                    <input type="text" value="@GoalWeight" readonly />
+                </div>
+            }
 
             <button class="edit-btn">EDIT</button>
         </div>
     </div>
 </div>
+
+@code {
+    private string activeTab = "General";
+
+    // Példa adatok, amelyeket a felhasználó adott meg
+    private string Username = "ktommy";
+    private string Email = "kthomasfmm@gmail.com";
+    private int Age = 25; // Ezt az értéket bejelentkezés után kell beállítani
+    private int Height = 176; // Ezt az értéket bejelentkezés után kell beállítani
+    private int Weight = 89; // Ezt az értéket bejelentkezés után kell beállítani
+    private int GoalWeight = 79; // Ezt az értéket bejelentkezés után kell beállítani
+
+    private void SetActiveTab(string tab)
+    {
+        activeTab = tab;
+    }
+}

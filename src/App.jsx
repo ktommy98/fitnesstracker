@@ -289,24 +289,24 @@ export default function App() {
                 direction="column"
                 padding="1rem"
                 width="15%"
-                minHeight="100vh"
+                minHeight="auto"
                 boxShadow="2px 0 5px rgba(0, 0, 0, 0.1)"
               >
               <Link to="/recipes">
               <Flex alignItems="center" gap="10px" cursor="pointer">
-                <GiCook size={40} color="#C68FE6" />
+                <GiCook size={40} color="white" />
                 <Text fontWeight="bold" style={{ color: "#fff" }}>Recipes</Text>
               </Flex>
               </Link>
               <Link to="/workoutplan">
               <Flex alignItems="center" gap="10px" cursor="pointer">
-                <GiWeightLiftingUp size={40} color="#C68FE6"/>
+                <GiWeightLiftingUp size={40} color="white"/>
                 <Text fontWeight="bold" style={{ color: "#fff" }}>Workout Plan</Text>
               </Flex>
               </Link>
               <div onClick={() => window.open("http://localhost:5224", "_blank", "width=1600,height=860,noopener,noreferrer")} style={{ cursor: "pointer" }}>
                 <Flex alignItems="center" gap="10px">
-                  <GiSuspicious size={40} color="#C68FE6"/>
+                  <GiSuspicious size={40} color="white"/>
                   <Text fontWeight="bold" style={{ color: "#fff" }}>Profile</Text>
                 </Flex>
               </div>

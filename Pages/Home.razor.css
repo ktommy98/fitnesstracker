@@ -35,20 +35,11 @@
     border-radius: 5px;
 }
 
-.delete {
-    background-color: #dc3545;
-}
 
 .account-settings {
     width: 100%;
     margin-top: 20px;
     text-align: center;
-}
-
-.language-select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
 }
 
 .themes {
@@ -64,9 +55,6 @@
     border-radius: 5px;
 }
 
-.green { background: #7FFF00; }
-.red { background: #DC143C; }
-.blue { background: #4635B1; }
 
 .back-btn {
     margin-top: 20px;
