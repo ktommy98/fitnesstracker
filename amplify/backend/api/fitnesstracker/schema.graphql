@@ -1,0 +1,10 @@
+type User 
+  @model 
+  @auth(rules: [{ allow: owner }]) {
+  userId: ID! @primaryKey
+  email: String!
+  age: Int
+  height: Int
+  weight: Int
+  goalWeight: Int
+}
