@@ -1,17 +1,16 @@
 {
   "auth": {
-    "user_pool_id": "eu-north-1_6k4xMT6Uo",
+    "user_pool_id": "eu-north-1_xh1tH0x9k",
     "aws_region": "eu-north-1",
-    "user_pool_client_id": "2g4svjhviksln0ht8krro1nm51",
-    "identity_pool_id": "eu-north-1:540eba16-2336-4b82-b42d-3af626cc4d78",
+    "user_pool_client_id": "52u53b0i3thccqff8jcb95kaqr",
+    "identity_pool_id": "eu-north-1:57733784-f964-4d7c-9293-0891106d1985",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email",
-      "birthdate",
       "custom:age",
       "custom:height",
       "custom:weight",
-      "custom:goalWeight"
+      "custom:goalWeight" 
     ],
     "username_attributes": [
       "email"
@@ -31,7 +30,7 @@
     "unauthenticated_identities_enabled": true
   },
   "data": {
-    "url": "https://zcyktlrxynh6bhi2mcrhffuw3u.appsync-api.eu-north-1.amazonaws.com/graphql",
+    "url": "https://d2xmkmfnjjgd3ms6ydse67f5j4.appsync-api.eu-north-1.amazonaws.com/graphql",
     "aws_region": "eu-north-1",
     "default_authorization_type": "AMAZON_COGNITO_USER_POOLS",
     "authorization_types": [
@@ -40,11 +39,11 @@
     "model_introspection": {
       "version": 1,
       "models": {
-        "UserProfile": {
-          "name": "UserProfile",
+        "Users": {
+          "name": "Users",
           "fields": {
             "id": {
-              "name": "id",
+              "name": "userId",
               "isArray": false,
               "type": "ID",
               "isRequired": true,
